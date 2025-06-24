@@ -1,12 +1,14 @@
 import { Button } from "../../components/ui/button";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+
 function UNODC() {
-      const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return (
     <div
       className="min-h-screen bg-black text-white pt-20"
@@ -14,26 +16,33 @@ function UNODC() {
         backgroundImage: `url(/unodc.jpeg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: "fixed", // Default for desktop
         backgroundColor: "rgba(0, 0, 0, 0.7)",
         backgroundBlendMode: "overlay",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <h1 className="text-7xl md:text-9xl font-black tracking-tight text-center mt-16 mb-8">
-          United Nations Office on Drugs and Crime
+      <style>
+        {`
+          @media (max-width: 640px) {
+            .min-h-screen {
+              background-attachment: scroll !important;
+            }
+          }
+        `}
+      </style>
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <h1 className="text-6xl md:text-9xl font-black tracking-tight text-center mt-8 md:mt-16 mb-8">
+          <span className="block">United Nations</span>
+          <span className="block">Office on</span>
+          <span className="block">Drugs and Crime</span>
         </h1>
         <p className="text-2xl md:text-3xl text-gray-200 text-center mb-12">
-          <strong>Agenda:</strong> Discussing National Policy Reforms
+          <strong>Agenda:</strong> Preventing and Disrupting International Arms Trafficking Networks
         </p>
         <p className="text-lg md:text-xl text-gray-300 text-center max-w-3xl mb-5">
-          The All India Political Parties Meet (UNODC) brings together
-          representatives of Indian political parties to debate and formulate
-          national policy reforms. Delegates engage in dynamic discussions,
-          representing diverse political ideologies to address critical issues
-          facing the nation.
+UNODC tackles issues related to transnational crime, narcotics trafficking, terrorism, and corruption. Delegates propose cooperative frameworks to combat illicit networks and promote legal and institutional reforms. It emphasizes international collaboration and rule of law.
         </p>
-        <div className="flex flex-col sm:flex-row mb-5 gap-4">
+        <div className="flex flex-row sm:flex-row mb-5 gap-4">
           <a
             href="https://example.com/UNODC"
             target="_blank"
@@ -61,7 +70,7 @@ function UNODC() {
               <span className="absolute inset-0 bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
               <span className="relative z-10 group-hover:text-white transition-colors duration-300 ease-in-out">
                 Background Guide
-              </span>{" "}
+              </span>
             </Button>
           </a>
         </div>

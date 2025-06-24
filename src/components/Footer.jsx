@@ -2,11 +2,11 @@ import { Instagram } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-gray-800 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-black text-white border-t border-gray-800 py-12 px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Contact Information */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-3">
             <div>
               <h3 className="text-lg font-semibold">Secretary General</h3>
               <p className="text-gray-300">Priyanshu Biswas: +91 93533 00298</p>
@@ -27,8 +27,8 @@ function Footer() {
           </div>
 
           {/* Social Media */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+          <div className="flex flex-col items-start sm:items-center md:items-start">
+            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
             <a
               href="https://www.instagram.com/chmun25/"
               target="_blank"
@@ -41,10 +41,8 @@ function Footer() {
           </div>
 
           {/* School Information */}
-          <div className="flex flex-col items-end text-right">
-            <p className="text-sm text-gray-400 mb-4">
-              Chrysalis High Kadugodi
-            </p>
+          <div className="flex flex-col sm:items-end text-left sm:text-right">
+            <p className="text-sm text-gray-400 mb-3">Chrysalis High Kadugodi</p>
             <p className="text-gray-300">
               Chrysalis High School,
               <br />
@@ -54,13 +52,13 @@ function Footer() {
             </p>
           </div>
         </div>
-      </div>
-      {/* Bottom Divider and Copyright */}
-      <div className="mt-4 mb-[-3rem] pt-4 border-t border-gray-800 text-center">
-        <p className="text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Chrysalis High Model United Nations.
-          All rights reserved.
-        </p>
+
+        {/* Divider & Copyright */}
+        <div className="mt-10 mb-[-2rem] pt-4 border-t border-gray-800 text-center">
+          <p className="text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} Chrysalis High Model United Nations. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

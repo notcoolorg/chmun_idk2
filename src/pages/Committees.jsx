@@ -11,12 +11,25 @@ function Committees() {
   }, [pathname]);
   const committees = [
     {
-      abbr: "AIPPM",
-      fullForm: "All India Political Parties Meet",
-      agenda:
-        "Deliberation on UCC with special emphasis on the recent WAQF bill",
-      bgImage: "/aippm.avif",
-      path: "/committees/aippm",
+      abbr: "DISEC",
+      fullForm: "Disarmament and International Security Committee",
+      agenda: "The Role of Cybersecurity in Maintaining International Peace and Security",
+      bgImage: "disec.jpg",
+      path: "/committees/disec",
+    },
+    {
+      abbr: "UNHRC",
+      fullForm: "United Nations Human Rights Council",
+      agenda: "Promoting Global Human Rights",
+      bgImage: "unhrc.jpeg",
+      path: "/committees/unhrc",
+    },   
+    {
+      abbr: "UNODC",
+      fullForm: "United Nations Office on Drugs and Crime",
+      agenda: "Preventing and Disrupting International Arms Trafficking Networks",
+      bgImage: "unodc.jpeg",
+      path: "/committees/unodc",
     },
     {
       abbr: "UNSC",
@@ -26,32 +39,20 @@ function Committees() {
       path: "/committees/unsc",
     },
     {
-      abbr: "DISEC",
-      fullForm: "Disarmament and International Security Committee",
-      agenda: "Nuclear Disarmament Strategies",
-      bgImage: "disec.jpg",
-      path: "/committees/disec",
-    },
-    {
-      abbr: "UNODC",
-      fullForm: "United Nations Office on Drugs and Crime",
-      agenda: "Combating Transnational Organized Crime",
-      bgImage: "unodc.jpeg",
-      path: "/committees/unodc",
-    },
-    {
       abbr: "CCC",
       fullForm: "Crisis Committee Council",
       agenda: "Managing Global Crises",
       bgImage: "ccc.jpeg",
       path: "/committees/ccc",
     },
+
     {
-      abbr: "UNHRC",
-      fullForm: "United Nations Human Rights Council",
-      agenda: "Promoting Global Human Rights",
-      bgImage: "unhrc.jpeg",
-      path: "/committees/unhrc",
+      abbr: "AIPPM",
+      fullForm: "All India Political Parties Meet",
+      agenda:
+        "Deliberation on UCC with special emphasis on the recent WAQF bill",
+      bgImage: "/aippm.avif",
+      path: "/committees/aippm",
     },
   ];
 
@@ -73,7 +74,7 @@ function Committees() {
             <h2 className="text-7xl md:text-9xl font-black tracking-tight">
               {committee.abbr}
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 mt-2">
+            <p className="text-xl md:text-2xl text-gray-300 mt-2 ml-1 md:ml-0">
               {committee.fullForm}
             </p>
             <p className="text-2xl md:text-2xl text-gray-200 mt-12">

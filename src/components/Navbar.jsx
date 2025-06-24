@@ -12,7 +12,6 @@ function Navbar() {
   };
 
   const handleAboutClick = () => {
-    if (location.pathname !== "/") {
       navigate("/");
       let attempts = 0;
       const maxAttempts = 10;
@@ -26,12 +25,6 @@ function Navbar() {
         }
         attempts++;
       }, 100); // Check every 100ms, up to 1 second
-    } else {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
     setIsOpen(false);
   };
 
