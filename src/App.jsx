@@ -37,7 +37,7 @@ function App() {
           {/* CHMUN Logo with Glow */}
           <div className="relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-white before:blur-3xl before:opacity-20 before:z-0">
             <motion.img
-              src="/chmunlogo.png"
+              src="/chmunlogo2.png"
               alt="CHMUN Logo"
               className="w-70 h-70 md:w-52 md:h-52 mt-3 md:mt-4.5 mb-[-0.5rem] mx-auto block relative z-10"
               initial={{ opacity: 0, scale: 0.5 }}
